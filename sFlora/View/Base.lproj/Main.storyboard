@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sFlora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundHome" translatesAutoresizingMaskIntoConstraints="NO" id="Et9-cI-il4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sFlora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="X2P-jN-0em">
+                                <rect key="frame" x="33" y="66" width="184" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkS-SU-PYN">
+                                <rect key="frame" x="75" y="781" width="264" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="30"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.68631205979999999" green="0.86304450759999995" blue="0.64094753829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7a-qR-STw"/>
+                                    <segue destination="8xH-Bk-csc" kind="presentation" identifier="goToScan" modalPresentationStyle="fullScreen" id="F41-sS-2Me"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Plant Are You Scanning?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xK-RB-dd1">
+                                <rect key="frame" x="47" y="278" width="320" height="70.666666666666686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="30"/>
+                                <color key="textColor" red="0.47843137254901957" green="0.78431372549019607" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TrK-cF-ctY">
+                                <rect key="frame" x="33" y="400" width="347" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keep your plants healthy" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RC0-OA-NWy">
+                                <rect key="frame" x="33" y="151" width="195" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="TrK-cF-ctY" id="gt2-za-9et"/>
+                        <outlet property="scanButton" destination="QkS-SU-PYN" id="HdT-MJ-4hI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+        <!--Scan Prep View Controller-->
+        <scene sceneID="JQJ-rg-Rhf">
+            <objects>
+                <viewController id="8xH-Bk-csc" customClass="scanPrepViewController" customModule="sFlora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zuh-ub-69r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundPrep" translatesAutoresizingMaskIntoConstraints="NO" id="KpA-Hb-MsS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZL-PZ-6Nl">
+                                <rect key="frame" x="20" y="44" width="56" height="33"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="8xH-Bk-csc" eventType="touchUpInside" id="274-sq-5gO"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="backHome" modalPresentationStyle="fullScreen" id="ci0-py-80r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prepare to Scan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cwG-fY-FcG">
+                                <rect key="frame" x="47" y="78" width="320" height="77"/>
+                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8J-8e-Y6C">
+                                <rect key="frame" x="20" y="276" width="374" height="115"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prep1" translatesAutoresizingMaskIntoConstraints="NO" id="UKS-Im-cYK">
+                                        <rect key="frame" x="16" y="11" width="90" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pluck 1 leaf from the plant" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygX-i5-vJY">
+                                        <rect key="frame" x="131" y="29" width="204" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lmu-qU-Ccd">
+                                <rect key="frame" x="20" y="440" width="374" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prep2" translatesAutoresizingMaskIntoConstraints="NO" id="D03-gI-T8l">
+                                        <rect key="frame" x="16" y="11" width="90" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take the photo in a well lit area" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4c-2q-9wa">
+                                        <rect key="frame" x="131" y="29" width="204" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jG6-za-ZuY">
+                                <rect key="frame" x="20" y="606" width="374" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prep3" translatesAutoresizingMaskIntoConstraints="NO" id="dCL-tb-j3u">
+                                        <rect key="frame" x="16" y="11" width="90" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make sure the leaf is in the center" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jc-gh-6r0">
+                                        <rect key="frame" x="131" y="29" width="204" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp1-cg-2c9">
+                                <rect key="frame" x="154" y="752" width="106" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="camButton"/>
+                                <connections>
+                                    <action selector="camPressed:" destination="8xH-Bk-csc" eventType="touchUpInside" id="VGk-be-uix"/>
+                                    <segue destination="SDU-mA-u0Z" kind="presentation" identifier="goToFinal" id="hM9-t7-oFY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Plant Are You Scanning?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-H5-QWh">
+                                <rect key="frame" x="47" y="196" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="30"/>
+                                <color key="textColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3ec-kS-24c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3ec-kS-24c" firstAttribute="trailing" secondItem="Z8J-8e-Y6C" secondAttribute="trailing" constant="20" id="1b0-Wk-gr0"/>
+                            <constraint firstItem="qZL-PZ-6Nl" firstAttribute="top" secondItem="3ec-kS-24c" secondAttribute="top" id="69E-uW-yDy"/>
+                            <constraint firstItem="3ec-kS-24c" firstAttribute="bottom" secondItem="Z8J-8e-Y6C" secondAttribute="bottom" constant="471" id="7IO-Ar-XJA"/>
+                            <constraint firstItem="KpA-Hb-MsS" firstAttribute="top" secondItem="zuh-ub-69r" secondAttribute="top" id="7zv-nG-M9X"/>
+                            <constraint firstItem="cwG-fY-FcG" firstAttribute="top" secondItem="3ec-kS-24c" secondAttribute="top" constant="34" id="BN6-fT-xKa"/>
+                            <constraint firstItem="cwG-fY-FcG" firstAttribute="leading" secondItem="3ec-kS-24c" secondAttribute="leading" constant="47" id="NvC-ss-b9n"/>
+                            <constraint firstItem="3ec-kS-24c" firstAttribute="bottom" secondItem="qZL-PZ-6Nl" secondAttribute="bottom" constant="785" id="PMW-fu-04b"/>
+                            <constraint firstItem="KpA-Hb-MsS" firstAttribute="trailing" secondItem="3ec-kS-24c" secondAttribute="trailing" id="W7c-Tb-JBS"/>
+                            <constraint firstItem="3ec-kS-24c" firstAttribute="bottom" secondItem="cwG-fY-FcG" secondAttribute="bottom" constant="707" id="Y3j-qx-X0D"/>
+                            <constraint firstItem="3ec-kS-24c" firstAttribute="trailing" secondItem="qZL-PZ-6Nl" secondAttribute="trailing" constant="338" id="YgV-8f-V40"/>
+                            <constraint firstItem="Z8J-8e-Y6C" firstAttribute="top" secondItem="3ec-kS-24c" secondAttribute="top" constant="232" id="dP8-iV-Nsk"/>
+                            <constraint firstItem="Z8J-8e-Y6C" firstAttribute="leading" secondItem="3ec-kS-24c" secondAttribute="leading" constant="20" id="g1L-bf-JgX"/>
+                            <constraint firstItem="3ec-kS-24c" firstAttribute="trailing" secondItem="cwG-fY-FcG" secondAttribute="trailing" constant="47" id="jMG-yw-di3"/>
+                            <constraint firstItem="qZL-PZ-6Nl" firstAttribute="leading" secondItem="3ec-kS-24c" secondAttribute="leading" constant="20" id="oyX-in-Bnn"/>
+                            <constraint firstItem="KpA-Hb-MsS" firstAttribute="leading" secondItem="3ec-kS-24c" secondAttribute="leading" id="rF1-vx-eO5"/>
+                            <constraint firstAttribute="bottom" secondItem="KpA-Hb-MsS" secondAttribute="bottom" id="zZm-CJ-5dx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="camButton" destination="Qp1-cg-2c9" id="tYp-sZ-V78"/>
+                        <outlet property="img1" destination="UKS-Im-cYK" id="MoL-B4-yfT"/>
+                        <outlet property="img2" destination="D03-gI-T8l" id="FEJ-ak-yw5"/>
+                        <outlet property="img3" destination="dCL-tb-j3u" id="SEy-Lp-V78"/>
+                        <outlet property="label" destination="3OC-H5-QWh" id="RVu-v4-0eI"/>
+                        <outlet property="view1" destination="Z8J-8e-Y6C" id="enc-z5-odp"/>
+                        <outlet property="view2" destination="Lmu-qU-Ccd" id="IZ4-zC-U6J"/>
+                        <outlet property="view3" destination="jG6-za-ZuY" id="boo-4X-Gni"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaI-aF-R2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827.536231884058" y="79.6875"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="Eed-Kq-WD0">
+            <objects>
+                <viewController id="SDU-mA-u0Z" customClass="finalViewController" customModule="sFlora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TDa-Ys-YSt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-C2-fnm">
+                                <rect key="frame" x="0.0" y="1" width="414" height="895"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRD-f5-4Oq">
+                                <rect key="frame" x="32" y="47" width="350" height="276"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-pc-ntV">
+                                <rect key="frame" x="32" y="447" width="350" height="361"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Accuracy: 10.3%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJF-EG-Dej">
+                                        <rect key="frame" x="15" y="18" width="319" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Problem:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9L-qc-h8i">
+                                        <rect key="frame" x="15" y="59" width="102" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lack of sunlight, along with nutrient diffency" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgc-XK-sZh">
+                                        <rect key="frame" x="16" y="88" width="319" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-Xm-czl">
+                                        <rect key="frame" x="15" y="199" width="319" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Planting various plants resistant to the bacteria, purchase patogen-free seeds from local stores, make sure to collect all diseased plants.</string>
+                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Suggested Treatment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-p1-gSF">
+                                        <rect key="frame" x="15" y="170" width="236" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrN-uZ-Bcv">
+                                        <rect key="frame" x="108" y="302" width="134" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="15"/>
+                                        <state key="normal" title="Learn More">
+                                            <color key="titleColor" red="0.48627454040000001" green="0.77647060160000003" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="learnMorePressed:" destination="SDU-mA-u0Z" eventType="touchUpInside" id="Vfn-i6-TtR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plant - Disease" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvk-Zh-T9d">
+                                <rect key="frame" x="47" y="380" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="23"/>
+                                <color key="textColor" red="0.47686475519999999" green="0.78260403869999995" blue="0.33614799379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0cO-WX-fiV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="accuracyLabel" destination="VJF-EG-Dej" id="l9r-Go-xiN"/>
+                        <outlet property="finalView" destination="Pa2-pc-ntV" id="h3H-cK-trQ"/>
+                        <outlet property="imageView" destination="kRD-f5-4Oq" id="R06-xI-wkr"/>
+                        <outlet property="learnMoreButton" destination="nrN-uZ-Bcv" id="9h6-Ie-8xF"/>
+                        <outlet property="plantDiseaseLabel" destination="Wvk-Zh-T9d" id="nWE-lX-DYD"/>
+                        <outlet property="problemLabel" destination="zgc-XK-sZh" id="Ip8-SC-HgU"/>
+                        <outlet property="treatmentLabel" destination="mmz-Xm-czl" id="Qtv-On-DYn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93F-J4-djN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.6376811594205" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundFinal" width="414" height="896"/>
+        <image name="backgroundHome" width="414" height="896"/>
+        <image name="backgroundPrep" width="414" height="896"/>
+        <image name="camButton" width="198" height="196"/>
+        <image name="prep1" width="175" height="175"/>
+        <image name="prep2" width="167" height="160"/>
+        <image name="prep3" width="149" height="150"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

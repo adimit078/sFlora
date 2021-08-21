@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4831EB3B26C5A00C0069A80D /* finalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831EB3A26C5A00C0069A80D /* finalViewController.swift */; };
 		4853469526C2247D009752EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853469426C2247D009752EA /* AppDelegate.swift */; };
 		4853469726C2247D009752EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853469626C2247D009752EA /* SceneDelegate.swift */; };
 		4853469926C2247D009752EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853469826C2247D009752EA /* ViewController.swift */; };
@@ -14,9 +15,12 @@
 		4853469F26C2247D009752EA /* sFlora.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4853469D26C2247D009752EA /* sFlora.xcdatamodeld */; };
 		485346A126C2247F009752EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485346A026C2247F009752EA /* Assets.xcassets */; };
 		485346A426C2247F009752EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485346A226C2247F009752EA /* LaunchScreen.storyboard */; };
+		48957D5F26C6F0AD00BB2A74 /* pDiseaseClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 48957D5E26C6F0AD00BB2A74 /* pDiseaseClassifier.mlmodel */; };
+		48F1816A26C490DD0009C6EB /* scanPrepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1816926C490DD0009C6EB /* scanPrepViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4831EB3A26C5A00C0069A80D /* finalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalViewController.swift; sourceTree = "<group>"; };
 		4853469126C2247D009752EA /* sFlora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sFlora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4853469426C2247D009752EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4853469626C2247D009752EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		485346A026C2247F009752EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		485346A326C2247F009752EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485346A526C2247F009752EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48957D5E26C6F0AD00BB2A74 /* pDiseaseClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = pDiseaseClassifier.mlmodel; sourceTree = "<group>"; };
+		48F1816926C490DD0009C6EB /* scanPrepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scanPrepViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4831EB3C26C5A0160069A80D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4853469826C2247D009752EA /* ViewController.swift */,
+				48F1816926C490DD0009C6EB /* scanPrepViewController.swift */,
+				4831EB3A26C5A00C0069A80D /* finalViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		4853468826C2247D009752EA = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +76,31 @@
 			children = (
 				4853469426C2247D009752EA /* AppDelegate.swift */,
 				4853469626C2247D009752EA /* SceneDelegate.swift */,
-				4853469826C2247D009752EA /* ViewController.swift */,
-				4853469A26C2247D009752EA /* Main.storyboard */,
+				48957D6026C6F11A00BB2A74 /* Model */,
+				48957D6126C6F12700BB2A74 /* View */,
+				4831EB3C26C5A0160069A80D /* Controllers */,
 				485346A026C2247F009752EA /* Assets.xcassets */,
-				485346A226C2247F009752EA /* LaunchScreen.storyboard */,
 				485346A526C2247F009752EA /* Info.plist */,
 				4853469D26C2247D009752EA /* sFlora.xcdatamodeld */,
 			);
 			path = sFlora;
+			sourceTree = "<group>";
+		};
+		48957D6026C6F11A00BB2A74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48957D5E26C6F0AD00BB2A74 /* pDiseaseClassifier.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48957D6126C6F12700BB2A74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				485346A226C2247F009752EA /* LaunchScreen.storyboard */,
+				4853469A26C2247D009752EA /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48957D5F26C6F0AD00BB2A74 /* pDiseaseClassifier.mlmodel in Sources */,
 				4853469926C2247D009752EA /* ViewController.swift in Sources */,
 				4853469526C2247D009752EA /* AppDelegate.swift in Sources */,
 				4853469F26C2247D009752EA /* sFlora.xcdatamodeld in Sources */,
+				4831EB3B26C5A00C0069A80D /* finalViewController.swift in Sources */,
+				48F1816A26C490DD0009C6EB /* scanPrepViewController.swift in Sources */,
 				4853469726C2247D009752EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68QLQDXK9K;
 				INFOPLIST_FILE = sFlora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.adityamittal.CoreDataTest.sFlora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68QLQDXK9K;
 				INFOPLIST_FILE = sFlora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.adityamittal.CoreDataTest.sFlora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
