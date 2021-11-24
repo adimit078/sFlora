@@ -254,7 +254,6 @@ class finalViewController: UIViewController {
         do {
             try! handler.perform([request])
         } catch {
-            print(error)
         }
     }
     
